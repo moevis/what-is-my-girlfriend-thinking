@@ -15,7 +15,7 @@
                 <img *ngFor="let imgSrc of category.thumbnailImages" [src]="imgSrc" width=30 height=30>
                 <div *ngIf="category.thumbnailImages.length > 0" class="thumbnailNums">{{ category.images.length }}</div>
             </div>
-            <button class="captureButton"><img src="/assets/img/camera.png" class="captureImage"/></button>
+            <button class="captureButton"><img src="./assets/img/camera.png" class="captureImage"/></button>
           </div>
       </div>
       <div class="seperator" id="rightSeperator"></div>

@@ -7,11 +7,6 @@
 
 #videoElement {
     background: rgb(241, 241, 241);
-    background-image: url('/assets/img/menhera.png');
-    /* background-repeat: no-repeat; */
-    background-size: contain;
-    background-repeat: no-repeat;
-
     width: 300px;
     height: 225px;
     border-radius: 18px;
