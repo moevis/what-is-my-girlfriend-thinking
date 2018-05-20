@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
       const exX = 30;
 
       for (let i = 0; i < leftPoints.length; i++) {
-        const yOffset = leftPoints[i].offsetTop - leftOrigin.offsetTop;
+        const yOffset = (leftPoints[i] as any).offsetTop - leftOrigin.offsetTop;
         const xOffset = sepWidth;
         const line = leftSvg.path(`M 0, ${sepHeight / 2} C ${exX}, ${sepHeight / 2}, ${sepWidth - exX}, ${sepHeight / 2 + yOffset}, ${sepWidth}, ${sepHeight / 2 + yOffset}`).fill('none');
         line.stroke({ color: '#f06', width: 10, linecap: 'round' });
@@ -76,10 +76,10 @@ export class AppComponent implements OnInit {
 
       const rightSvg = SVG('rightSeperator').size(sepWidth, sepHeight);
       const rightOrigin = document.getElementById('rightOrigin');
-      const rightPoints = document.getElementsByClassName('rightAnchor');
+      // const rightPoints = document.getElementsByClassName('rightAnchor');
 
       for (let i = 0; i < leftPoints.length; i++) {
-        const yOffset = - leftPoints[i].offsetTop + rightOrigin.offsetTop;
+        const yOffset = - (leftPoints[i] as any).offsetTop + rightOrigin.offsetTop;
         const line = rightSvg.path(`M 0, ${sepHeight / 2 + yOffset} C ${exX}, ${sepHeight / 2 + yOffset}, ${sepWidth - exX}, ${sepHeight / 2}, ${sepWidth}, ${sepHeight / 2}`).fill('none');
         line.stroke({ color: '#f06', width: 10, linecap: 'round' });
       }

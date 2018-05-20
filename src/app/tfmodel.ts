@@ -10,16 +10,6 @@ export class TFModel {
 
     build_model() {
         this.model = new tf.Sequential();
-        // this.model.add(tf.layers.reshape({
-        //     inputShape: [this.image_height * this.image_width * 3],
-        //     targetShape: [this.image_height, this.image_width, 3],
-        // }));
-        // this.model.add(tf.layers.flatten({
-        //     inputShape: [this.image_height, this.image_width, 3]
-
-        // }));
-        // this.model.add(tf.layers.dense({ units: 100, activation: 'relu'}));
-        // this.model.add(tf.layers.dense({ units: this.num_of_class, activation: 'softmax'}));
 
         this.model.add(tf.layers.conv2d({
             kernelSize: 3,
@@ -85,7 +75,7 @@ export class TFModel {
         // const x_data_tf = tf.tensor(x_data).reshape([-1, this.image_height, this.image_width, 1]);
 
 
-        let image_xs = xs.map((d) => {
+        const image_xs = xs.map((d) => {
             const pixels = tf.fromPixels(d, 3);
             return pixels.toFloat().div(tf.scalar(127)).sub(tf.scalar(1));
         });
