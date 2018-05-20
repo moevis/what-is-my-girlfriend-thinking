@@ -1,27 +1,15 @@
-# Faceapp
+# What Is My Girlfriend Thinking ?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+注意！这同样也适用于男朋友！！！
 
-## Development server
+## 运行
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+首先你要有 `angular-cli` 。本地运行的方法是 cd 到工程目录下，运行 `ng serve`，然后在浏览器中访问 `localhost:4200/` 就可以了
 
-## Code scaffolding
+## 打包
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+运行 `ng build` 直接构建项目. 这将在 `dist/` 目录下产生目标网站. 添加 `--prod` 标记可构建用于部署的页面。
 
-## Build
+## 玩法
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+玩法很简单，如果你的电脑有摄像头的话，点击『开启摄像头』后，你可以看到摄像头捕捉的图像。点击中间的类别，你可以录入相应图像，在训练完毕后，摄像头会实时分析图像，并给出最大的类别概率。你可以让你的女朋友来录几张图片，然后下回你女朋友摆出这个表情后就知道她在想什么啦！！！
