@@ -20,8 +20,11 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
+    "@tensorflow/tfjs": "^0.11.1",
+    "@types/svg.js": "^2.3.1",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
+    "svg.js": "^2.6.4",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

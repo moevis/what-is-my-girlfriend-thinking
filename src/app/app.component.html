@@ -1,20 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div id='app'>
+  <div id="titleContainer"><h1>女朋友情绪识别器<span *ngIf='training'>(训练中)</span></h1></div>
+  <div id="mainContainer">
+      <div id="videoContainer">
+          <video #videoElement autoplay=1 id="videoElement" [class.active]='video_on'></video>
+          <button (click)='startVideo()' *ngIf='!video_on' id="startVideo">开启摄像头</button>
+      </div>
+      <span id="leftOrigin"></span>
+      <div class="seperator" id="leftSeperator"></div>
+    
+      <div id="categoryContainer">
+          <div *ngFor="let category of categories" class="category" (click)="startCapture(category)">
+            <div class="categoryHeader"><span class="leftAnchor"></span><div>{{ category.name }}</div></div> 
+            <div class="thumbnailContainer">
+                <img *ngFor="let imgSrc of category.thumbnailImages" [src]="imgSrc" width=30 height=30>
+                <div *ngIf="category.thumbnailImages.length > 0" class="thumbnailNums">{{ category.images.length }}</div>
+            </div>
+            <button class="captureButton"><img src="/assets/img/camera.png" class="captureImage"/></button>
+          </div>
+      </div>
+      <div class="seperator" id="rightSeperator"></div>
+      <span id="rightOrigin"></span>
+      <div id="resultContainer" [className]='result.className' >{{ result.name }} 概率:{{ result.prob }}%</div>
+  </div>
+  <div id="copyrightContainer">menhera 来自<a href="https://twitter.com/pomujoynet1">pomujoynet1</a></div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

@@ -1,0 +1,230 @@
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+#videoElement {
+    background: rgb(241, 241, 241);
+    background-image: url('/assets/img/menhera.png');
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 300px;
+    height: 225px;
+    border-radius: 18px;
+    box-shadow: 5px 3px 11px 0px #58585863;
+    border-bottom: 5px solid #b7b7b7;
+}
+
+#videoElement.active {
+    background-color: antiquewhite;
+    background-image: none;
+}
+
+#videoContainer {
+    position: relative;
+}
+
+.seperator {
+    width: 60px;
+    height: 380px;
+    z-index: 1;
+}
+
+#leftSeperator {
+    margin-right: -5px;
+}
+
+#rightSeperator {
+    margin-left: 15px;
+}
+
+#categoryContainer {
+    width: 300px;
+}
+
+#startVideo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    margin-left: -50px;
+    height: 40px;
+    margin-top: -20px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.644);
+}
+
+#startVideo:hover {
+    border: 2px solid rgb(148, 148, 148);
+}
+
+.category {
+    height: 80px;
+    width: 310px;
+    background: #ffcccc;
+    clear:both;
+    white-space:nowrap;
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 15px;
+    /* box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35); */
+    box-shadow: 5px 3px 11px 0px #58585863;
+    margin:5px;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+    overflow:hidden;
+    border-bottom: 5px solid #ff8585;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.captureButton {
+    float: right;
+    height: 100%;
+    background: pink;
+    border: none;
+    width: 80px;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.captureImage {
+    height: 60%;
+}
+
+.categoryHeader {
+    padding-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+}
+
+.captureButton:after {
+    content:"";
+    border:8px solid;
+    border-color:transparent transparent transparent #ffcccc;
+    position:absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 0;
+    transition: border-color 0.5s ease;
+
+}
+
+.category:hover {
+    background-color: #ff9f9f;
+    border-bottom: 5px solid #c55757;
+    /* margin-top: 2px; */
+    /* margin-bottom: 3px; */
+    box-shadow: 6px 8px 20px 1px #42424263;
+}
+
+.category:hover > .captureButton:after {
+    border-left-color: #ff9f9f;
+}
+.category:hover > .captureButton {
+    background-color: #ff7c7c;
+}
+
+.thumbnailContainer {
+    align-items: center;
+    display: flex;
+    width: 120px;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#resultContainer {
+    width: 140px;
+    height: 60px;
+    background: white;
+    box-shadow: 5px 3px 11px 0px #58585863;
+
+    border-bottom: 5px solid #b7b7b7;
+    border-radius: 15px;
+    display: inline;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+    position: relative;
+
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+}
+
+#resultContainer.stars::before {
+    content: '';
+    position: absolute;
+    background: url('/assets/img/menhera-stars.png');
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -100px;
+}
+
+#resultContainer.sad {
+    background: #c55757;
+    color: white;
+    border-bottom: 5px solid #700000;
+}
+
+#resultContainer.happy::before {
+    content: '';
+    position: absolute;
+    background: url('/assets/img/menhera-happy.png');
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -90px;
+}
+
+#resultContainer.happy {
+    background: greenyellow;
+    border-bottom: 5px solid #328a00;
+}
+
+#resultContainer.jealous {
+    background: orange;
+    border-bottom: 5px solid #9e2500;
+}
+
+
+
+#copyrightContainer {
+    margin-top: 80px;
+    font-size: 0.8em;
+}
+
+#titleContainer {
+    margin-bottom: 40px;
+}
+
+.thumbnailNums {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #6d6d6d44;
+}
+
+.leftAnchor, .rightAnchor {
+    position: absolute;
+}
