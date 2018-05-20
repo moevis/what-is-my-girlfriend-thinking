@@ -223,3 +223,25 @@
 .leftAnchor, .rightAnchor {
     position: absolute;
 }
+
+#qrcode {
+    display: none;
+    position: absolute;
+}
+
+#wechat {
+    position: relative;
+}
+
+#wechat:hover > #qrcode {
+    display: block;
+    width: 100px;
+    height: 100px;
+    bottom: 50px;
+    left: -30px;
+}
+
+.socialNetwork {
+    width: 30px;
+    margin: 10px;
+}
