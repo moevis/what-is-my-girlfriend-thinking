@@ -2,6 +2,8 @@
 
 注意！这同样也适用于男朋友！！！
 
+这是使用 Tensorflow.js 和 Angularjs 搭建的用于表情分类的小应用。
+
 ## 运行
 
 首先你要有 `angular-cli` 。本地运行的方法是 cd 到工程目录下，运行 `ng serve`，然后在浏览器中访问 `localhost:4200/` 就可以了
