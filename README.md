@@ -2,7 +2,7 @@
 
 注意！这同样也适用于男朋友！！！
 
-这是使用 Tensorflow.js 和 Angularjs 搭建的用于表情分类的小应用。
+这是使用 Tensorflow.js 和 Angular 搭建的用于表情分类的小应用。
 
 ## 运行
 
